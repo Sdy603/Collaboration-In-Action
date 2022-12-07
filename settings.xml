@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Virtualized Shared" authProfile="Spotify Demo Authorization" created="3.40.2" encryptionMode="Not encrypted" id="57a727ed-2add-430b-bfba-8b290eb4fb5b" name="Weather Map" projectVersion="" resourceRoot="${projectDir}" updated="3.42.1" abortOnError="false" runType="SEQUENTIAL" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="Virtualized Shared" authProfile="Spotify Demo Authorization" compositeProjectFormat="1.3" created="3.40.2" encryptionMode="Not encrypted" id="57a727ed-2add-430b-bfba-8b290eb4fb5b" name="Weather Map" projectVersion="" resourceRoot="${projectDir}" runType="SEQUENTIAL" updated="3.42.1" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="57a727ed-2add-430b-bfba-8b290eb4fb5bfileName">Spotify-Demonstration-readyapi-project</con:setting>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">

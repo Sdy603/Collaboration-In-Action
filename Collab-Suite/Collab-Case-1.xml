@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="9d89fe99-c41e-4886-a64f-5e5e5dfee787" keepSession="false" name="Sams" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="1e831265-dcca-402e-ae83-26d756dc4d7e" keepSession="false" name="Collab Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="9d89fe99-c41e-4886-a64f-5e5e5dfee787fileName">Sams</con:setting>
+    <con:setting id="1e831265-dcca-402e-ae83-26d756dc4d7efileName">Collab-Case-1</con:setting>
   </con:settings>
-  <con:testStep id="d6090259-6918-40f6-885b-c87b375d89f2" name="Weather - Request 1" type="restrequest">
+  <con:testStep id="754b0ad4-df29-4f57-917c-fb6c958e63b7" name="Request 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Weather" resourcePath="/data/2.5/weather" service="http://api.openweathermap.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Weather - Request 1">
+      <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Request 1">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="35bbe118-9b7a-479d-a26e-fb77478094fb" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="35bbe118-9b7a-479d-a26e-fb77478094fb" keepSession="false" name="Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="35bbe118-9b7a-479d-a26e-fb77478094fbfileName">Test-Case-1</con:setting>
   </con:settings>
-  <con:testStep type="restrequest" name="Weather - Request 1" id="2e002dfd-67b2-4065-a892-b9a4ed906489">
+  <con:testStep id="2e002dfd-67b2-4065-a892-b9a4ed906489" name="Weather - Request 1" type="restrequest">
     <con:settings/>
-    <con:config service="http://api.openweathermap.org" resourcePath="/data/2.5/weather" methodName="Weather" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config xsi:type="con:RestRequestStep" methodName="Weather" resourcePath="/data/2.5/weather" service="http://api.openweathermap.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Weather - Request 1">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

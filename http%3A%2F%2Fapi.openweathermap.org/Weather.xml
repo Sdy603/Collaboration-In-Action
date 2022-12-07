@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource id="e2a3c9b6-2856-4068-aaf4-92d704ddafcf" name="Weather" path="/data/2.5/weather" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource id="e2a3c9b6-2856-4068-aaf4-92d704ddafcf" name="Weather" path="/data/2.5/weather" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e2a3c9b6-2856-4068-aaf4-92d704ddafcffileName">Weather</con:setting>
   </con:settings>
