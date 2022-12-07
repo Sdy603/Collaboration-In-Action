@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1e831265-dcca-402e-ae83-26d756dc4d7e" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="Collab Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1e831265-dcca-402e-ae83-26d756dc4d7efileName">Collab-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="754b0ad4-df29-4f57-917c-fb6c958e63b7">
+    <con:settings/>
+    <con:config service="http://api.openweathermap.org" resourcePath="/data/2.5/weather" methodName="Weather" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://api.openweathermap.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://ec2-18-224-146-21.us-east-2.compute.amazonaws.com/data/2.5/weather</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="q" value="Revere"/>
+          <con:entry key="appid" value="85c705dd76051cb3d8e5540b300279d4"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>q</con:entry>
+          <con:entry>appid</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="5032bcc7-7a88-465d-b2bb-2e3dc145b570">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="627d9bc6-8c74-4d91-a0ce-b98305678a04">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="c12f367b-2338-40ce-89e7-c97754a9034f" name="Collab Suite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c12f367b-2338-40ce-89e7-c97754a9034ffileName">Collab-Suite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>
