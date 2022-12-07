@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource id="e2a3c9b6-2856-4068-aaf4-92d704ddafcf" name="Weather" path="/data/2.5/weather" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e2a3c9b6-2856-4068-aaf4-92d704ddafcffileName">Weather</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method id="0db3af66-e9f3-4467-bfe7-f6cd1bdd0424" method="GET" name="Weather">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>q</con:name>
+        <con:value>Boston</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>Boston</con:default>
+        <con:path/>
+        <con:description/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>appid</con:name>
+        <con:value>85c705dd76051cb3d8e5540b300279d4</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>85c705dd76051cb3d8e5540b300279d4</con:default>
+        <con:path/>
+        <con:description/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>weat:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>weat:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>weat:Fault</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType/>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>weat:Fault</con:element>
+    </con:representation>
+    <con:request id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Request 1">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://api.openweathermap.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://ec2-18-224-146-21.us-east-2.compute.amazonaws.com/data/2.5/weather</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="q" value="Revere"/>
+        <con:entry key="appid" value="85c705dd76051cb3d8e5540b300279d4"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>q</con:entry>
+        <con:entry>appid</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="5032bcc7-7a88-465d-b2bb-2e3dc145b570">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="627d9bc6-8c74-4d91-a0ce-b98305678a04">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="5032bcc7-7a88-465d-b2bb-2e3dc145b570">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="627d9bc6-8c74-4d91-a0ce-b98305678a04">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="5032bcc7-7a88-465d-b2bb-2e3dc145b570">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="627d9bc6-8c74-4d91-a0ce-b98305678a04">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

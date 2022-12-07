@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockService addUnmatchedOperation="false" host="localhost" httpSecure="false" id="f572f1ed-77ff-4550-b5a2-fe62f9b93f04" maxNumberOfRoutedResponse="30" name="Virtual Weather - Sam" path="/" port="8089" routeEndpoint="http://api.openweathermap.org" routeModeEnabled="false" routeUnmatchedOperation="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f572f1ed-77ff-4550-b5a2-fe62f9b93f04fileName">Virtual-Weather---Sam</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:constraints>
+    <con:congestion>0</con:congestion>
+    <con:inputBandwidth>-1</con:inputBandwidth>
+    <con:outputBandwidth>-1</con:outputBandwidth>
+    <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+    <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+    <con:virtError>
+      <con:start>0</con:start>
+      <con:endless>true</con:endless>
+    </con:virtError>
+  </con:constraints>
+  <con:dataSources>
+    <con:dataSource>
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>InternationalCities.xlsx</file>
+          <worksheet>Sheet1</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:name>Data Source 1</con:name>
+      <con:property>Paris</con:property>
+      <con:property>FR</con:property>
+    </con:dataSource>
+  </con:dataSources>
+  <con:headerValidator type="NONE"/>
+</con:restMockService>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="d2fc53ca-4255-47ec-8218-0edd88ba0650" keepSession="false" name="Weather Data" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d2fc53ca-4255-47ec-8218-0edd88ba0650fileName">Weather-Data</con:setting>
+  </con:settings>
+  <con:testStep id="4dcde547-ae19-443b-8a9b-b037ed30cba1" name="Data Source" type="datasource">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="JDBC">
+        <con:configuration>
+          <driver>net.sourceforge.jtds.jdbc.Driver</driver>
+          <connstr>jdbc:jtds:sqlserver://127.0.0.1:1433/Cities;domain=Smartbear.com;trusted_connection=yes</connstr>
+          <pass/>
+          <Connection>&lt;None></Connection>
+          <query>Select top 5 Cities.Cities as Cities_Cities
+From Cities</query>
+          <fetchSize/>
+          <stored-procedure>false</stored-procedure>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Cities_Cities</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="b59a5e70-b1a2-43ea-9f97-08cef5bcb9bb" name="Weather Data" type="restrequest">
+    <con:settings/>
+    <con:config xsi:type="con:RestRequestStep" methodName="Weather" resourcePath="/data/2.5/weather" service="http://api.openweathermap.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Weather Data">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://api.openweathermap.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri>
+        <con:assertion id="b25e1ce5-8826-4cb4-bdec-30dd3f0a7f1e" name="Valid HTTP Status Codes" type="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="adcc17b4-71db-4d39-887a-61936f391312" name="Response SLA" type="Response SLA Assertion">
+          <con:configuration>
+            <SLA>500</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion id="902cf96c-aa4a-4c89-b02a-e9ae42f72d7a" name="Match content of [name]" type="JsonPath Match">
+          <con:configuration>
+            <path>$['name']</path>
+            <content>${Data Source#Cities_Cities}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Service</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="appid" value="bf13b58b3fba5d974c9e7d423f21159d"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>q</con:entry>
+          <con:entry>appid</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="5032bcc7-7a88-465d-b2bb-2e3dc145b570">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="627d9bc6-8c74-4d91-a0ce-b98305678a04">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="a59659be-647d-4f6a-a444-1ea264eb30b6" name="Delay" type="delay">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep id="65379e5f-0d71-4cb9-913c-6b18cb6331c6" name="Data Source Loop" type="datasourceloop">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>Request 1</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>4dcde547-ae19-443b-8a9b-b037ed30cba1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>b59a5e70-b1a2-43ea-9f97-08cef5bcb9bb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a59659be-647d-4f6a-a444-1ea264eb30b6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>65379e5f-0d71-4cb9-913c-6b18cb6331c6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="5032bcc7-7a88-465d-b2bb-2e3dc145b570">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="627d9bc6-8c74-4d91-a0ce-b98305678a04">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

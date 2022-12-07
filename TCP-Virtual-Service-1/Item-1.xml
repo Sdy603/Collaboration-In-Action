@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:customOperation id="4720b0b6-734a-4099-b487-5f220202b02f" name="Item 1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4720b0b6-734a-4099-b487-5f220202b02ffileName">Item-1</con:setting>
+  </con:settings>
+  <con:defaultResponse>Response 1</con:defaultResponse>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:routeEnabled>true</con:routeEnabled>
+  <con:routeScript/>
+  <con:saveRoutedResponse>true</con:saveRoutedResponse>
+  <con:operationProperties>
+    <con:property>
+      <con:name>requestData</con:name>
+      <con:value>3113</con:value>
+    </con:property>
+  </con:operationProperties>
+  <con:customResponse id="f0d3b4cf-0eb4-4a62-b7b0-558c74a1d2ce" name="Response 1">
+    <con:settings/>
+    <con:script/>
+    <con:responseProperties>
+      <con:property>
+        <con:name>responseData</con:name>
+        <con:value>50726f647563743d3113</con:value>
+      </con:property>
+    </con:responseProperties>
+  </con:customResponse>
+</con:customOperation>

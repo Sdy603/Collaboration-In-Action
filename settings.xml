@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Virtualized Shared" authProfile="Spotify Demo Authorization" created="3.40.2" encryptionMode="Not encrypted" id="57a727ed-2add-430b-bfba-8b290eb4fb5b" name="Weather Map" projectVersion="" resourceRoot="${projectDir}" updated="3.42.1" abortOnError="false" runType="SEQUENTIAL" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="57a727ed-2add-430b-bfba-8b290eb4fb5bfileName">Spotify-Demonstration-readyapi-project</con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Settings File Password" value=""/>
+  <con:entry key="Report Format(s)" value="XML"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="Test Suite 1"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="Test Case 1"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-3.40.2\bin"/>
+  <con:entry key="Environment" value="No Environment"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="${WORKSPACE}"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+  </con:settings>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>Custom Password</con:name>
+      <con:value>password</con:value>
+    </con:property>
+    <con:property>
+      <con:name>temp</con:name>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer>
+    <con:databaseConnection>
+      <con:name>Sams Music DB</con:name>
+      <con:driver>net.sourceforge.jtds.jdbc.Driver</con:driver>
+      <con:connectionString>jdbc:jtds:sqlserver://127.0.0.1:1433/Sams_Music_DB;domain=Smartbear.com;trusted_connection=yes</con:connectionString>
+      <con:password/>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+  </con:databaseConnectionContainer>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer>
+    <con:oAuth2Profile>
+      <con:name>Spotify Demo Authorization</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:redirectURI>http://localhost:8081/callback/</con:redirectURI>
+      <con:accessToken>BQCMLA4opZCjiigB6Qy5yKLd7jP-3dkMQe_4fp8kfU5GxoCl3qTzbq8ZQQnwpneHbfXZwLBXNH1rU7zHy5PAmXaEQP3PBVSz-rK6CvTDw0tHsyLq0Lz3S2h3lOyQWIwNZIzHZoBeISNtUevJevBn9xEA-RwYzb5_JkBOU5ZUD91I8D1dvHBRfyUOSPtLnBmCiIaAyxs7oSXEQot9OzDImGxCAR8lFQe_AWqBtuD3oPatMwnObGzkKFv1smj5wpxkzaaTReLG194JjbGmycUM4zkJKFvobcUMedtzkBuQbWBvrmIs1qtd84T7S0B86oFo</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
+      <con:accessTokenIssuedTime>1668529363</con:accessTokenIssuedTime>
+      <con:manualAccessTokenExpirationTime/>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:clientID>5395a3d25383469dacd19f2ffe60eea6</con:clientID>
+      <con:clientSecret>d288f8ea576e47e3b8025fde6eda992a</con:clientSecret>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:refreshToken>AQBAgquF7Xd3a5tiymJFiAkuWzbSaDJiA7OmYvTIlW8RDhcTzgDohYaYXAB8ZbBCoaOEQo2j95xBNJBgUr8FU8PRcmxr3xtlfw15bW-4i6u_ncVbVeE-yuqoMmj9FRahKd8</con:refreshToken>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+      <con:accessTokenExpirationTime>3600</con:accessTokenExpirationTime>
+      <con:javaScripts>
+        <con:entry>document.getElementById('login-username').value = '1297351218'
+
+document.getElementById('login-password').value = 'Bailey621!'</con:entry>
+        <con:entry/>
+      </con:javaScripts>
+      <con:useAuthHeader>true</con:useAuthHeader>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth2Profile>
+  </con:oAuth2ProfileContainer>
+  <con:oAuth1ProfileContainer/>
+  <con:eventHandlers name="RequestFilter.filterRequest" type="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers name="TestRunListener.afterStep" type="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:environment id="875448ab-c9ca-498a-ac01-50bc46ffbec1" index="0" name="Virtualized Service">
+    <con:service name="http://api.openweathermap.org" type="REST">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://localhost:8089</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>Custom Password</con:name>
+      <con:value>ThisIsABadPassword</con:value>
+    </con:property>
+    <con:property>
+      <con:name>temp</con:name>
+      <con:value>field</con:value>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>Sams Music DB</con:name>
+        <con:driver>net.sourceforge.jtds.jdbc.Driver</con:driver>
+        <con:connectionString>jdbc:jtds:sqlserver://127.0.0.1:1433/Sams_Music_DB;domain=Smartbear.com;trusted_connection=yes</con:connectionString>
+        <con:password/>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:environment id="b8d8e16a-881b-41e9-8470-5034f189f85b" index="2" name="Development">
+    <con:service name="http://api.openweathermap.org" type="REST">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://ec2-18-224-146-21.us-east-2.compute.amazonaws.com:8089</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>Custom Password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>temp</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>Sams Music DB</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:environment id="704fb6ae-ecad-4b45-9198-a0e4e656e783" index="3" name="Staging">
+    <con:property>
+      <con:name>Custom Password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>temp</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>Sams Music DB</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:environment id="611cf03f-29a0-4367-a18f-ab1c228b617c" index="1" name="Virtualized Shared">
+    <con:service name="http://api.openweathermap.org" type="REST">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPassword="" proxyPort="" proxyUsername="">http://ec2-18-224-146-21.us-east-2.compute.amazonaws.com:8089</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>Custom Password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>temp</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>Sams Music DB</con:name>
+        <con:driver>net.sourceforge.jtds.jdbc.Driver</con:driver>
+        <con:connectionString>jdbc:jtds:sqlserver://127.0.0.1:1433/Cities;domain=Smartbear.com;trusted_connection=yes</con:connectionString>
+        <con:password/>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:virtServer>
+    <con:name>Engineering VirtServer</con:name>
+    <con:url>https://ec2-18-224-146-21.us-east-2.compute.amazonaws.com:9090</con:url>
+  </con:virtServer>
+  <con:authRepository>
+    <con:oAuth20AuthEntry>
+      <con:name>Spotify Demo Authorization</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:redirectURI>http://localhost:8081/callback/</con:redirectURI>
+      <con:accessToken>BQCMLA4opZCjiigB6Qy5yKLd7jP-3dkMQe_4fp8kfU5GxoCl3qTzbq8ZQQnwpneHbfXZwLBXNH1rU7zHy5PAmXaEQP3PBVSz-rK6CvTDw0tHsyLq0Lz3S2h3lOyQWIwNZIzHZoBeISNtUevJevBn9xEA-RwYzb5_JkBOU5ZUD91I8D1dvHBRfyUOSPtLnBmCiIaAyxs7oSXEQot9OzDImGxCAR8lFQe_AWqBtuD3oPatMwnObGzkKFv1smj5wpxkzaaTReLG194JjbGmycUM4zkJKFvobcUMedtzkBuQbWBvrmIs1qtd84T7S0B86oFo</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
+      <con:accessTokenIssuedTime>1668529363</con:accessTokenIssuedTime>
+      <con:manualAccessTokenExpirationTime/>
+      <con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit>
+      <con:clientID>5395a3d25383469dacd19f2ffe60eea6</con:clientID>
+      <con:clientSecret>d288f8ea576e47e3b8025fde6eda992a</con:clientSecret>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:refreshToken>AQBAgquF7Xd3a5tiymJFiAkuWzbSaDJiA7OmYvTIlW8RDhcTzgDohYaYXAB8ZbBCoaOEQo2j95xBNJBgUr8FU8PRcmxr3xtlfw15bW-4i6u_ncVbVeE-yuqoMmj9FRahKd8</con:refreshToken>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+      <con:accessTokenExpirationTime>3600</con:accessTokenExpirationTime>
+      <con:javaScripts>
+        <con:entry>document.getElementById('login-username').value = '1297351218'
+
+document.getElementById('login-password').value = 'Bailey621!'</con:entry>
+        <con:entry/>
+      </con:javaScripts>
+      <con:useAuthHeader>true</con:useAuthHeader>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>oauth_2_0 AUTHORIZATION</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://accounts.spotify.com/authorize</con:authorizationURI>
+      <con:accessTokenURI>https://accounts.spotify.com/api/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:scope>app-remote-control playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-follow-read user-follow-modify user-top-read user-read-playback-position user-read-playback-state user-read-recently-played user-read-currently-playing user-modify-playback-state ugc-image-upload streaming</con:scope>
+    </con:oAuth20AuthEntry>
+  </con:authRepository>
+  <con:environmentSpec>
+    <con:entry environmentId="875448ab-c9ca-498a-ac01-50bc46ffbec1">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="b8d8e16a-881b-41e9-8470-5034f189f85b">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="704fb6ae-ecad-4b45-9198-a0e4e656e783">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="611cf03f-29a0-4367-a18f-ab1c228b617c">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags/>
+</con:soapui-project>
