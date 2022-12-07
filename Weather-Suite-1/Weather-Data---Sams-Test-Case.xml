@@ -27,10 +27,10 @@ From Cities</query>
       <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
     </con:config>
   </con:testStep>
-  <con:testStep id="b59a5e70-b1a2-43ea-9f97-08cef5bcb9bb" name="Weather Data" type="restrequest">
+  <con:testStep id="b59a5e70-b1a2-43ea-9f97-08cef5bcb9bb" name="Weather Data 1" type="restrequest">
     <con:settings/>
     <con:config xsi:type="con:RestRequestStep" methodName="Weather" resourcePath="/data/2.5/weather" service="http://api.openweathermap.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Weather Data">
+      <con:restRequest id="9fb8ef56-ed1e-48e3-83ce-d85ac4e3868b" mediaType="application/json" name="Weather Data 1">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -84,6 +84,12 @@ From Cities</query>
     <con:settings/>
     <con:config>
       <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay 2" id="06891f99-ddf0-4d2d-a0c8-3a43b6c2982b">
+    <con:settings/>
+    <con:config>
+      <delay>100</delay>
     </con:config>
   </con:testStep>
   <con:testStep id="65379e5f-0d71-4cb9-913c-6b18cb6331c6" name="Data Source Loop" type="datasourceloop">
