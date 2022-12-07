@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="d2fc53ca-4255-47ec-8218-0edd88ba0650" keepSession="false" name="Weather Data" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" id="d2fc53ca-4255-47ec-8218-0edd88ba0650" keepSession="false" name="Weather Data - Sams Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="d2fc53ca-4255-47ec-8218-0edd88ba0650fileName">Weather-Data</con:setting>
+    <con:setting id="d2fc53ca-4255-47ec-8218-0edd88ba0650fileName">Weather-Data---Sams-Test-Case</con:setting>
   </con:settings>
   <con:testStep id="4dcde547-ae19-443b-8a9b-b037ed30cba1" name="Data Source" type="datasource">
     <con:settings>
