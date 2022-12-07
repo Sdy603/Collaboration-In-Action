@@ -1,6 +1,7 @@
 http%3A%2F%2Fapi.openweathermap.org\Weather.xml
 Weather-Suite-1\Weather-Data---Sams-Test-Case.xml
 Sams\Sams.xml
+Sams-Suite-2\Test-Case-1.xml
 Virtual-Weather---Sam\%2Fdata%2F2.5%2Fweather.xml
 JDBC-Virtual-Service-1\Select-%2A-From-Cities-where-Cities-%3D-%27Boston%27.xml
 JDBC-Virtual-Service-1\Select-%2A-From-Cities.xml
